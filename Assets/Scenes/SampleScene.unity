@@ -270,6 +270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1317857465}
   - component: {fileID: 1317857464}
+  - component: {fileID: 1317857466}
   m_Layer: 0
   m_Name: Match3
   m_TagString: Untagged
@@ -297,6 +298,7 @@ MonoBehaviour:
   - {fileID: 8389135177181505040, guid: 1bcc34a08c52b4a20b57dae10212d95a, type: 3}
   - {fileID: 8037133563030376954, guid: 43b2c2e8c9a2b49bebb9853953244621, type: 3}
   - {fileID: 2577725064240717196, guid: 700762604ea6246ab93b2dcf66a5d57a, type: 3}
+  game: {fileID: 1317857466}
 --- !u!4 &1317857465
 Transform:
   m_ObjectHideFlags: 0
@@ -312,6 +314,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1317857466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1317857463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e813632594b13ac4fa71f0b1acb60c58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  size:
+    x: 8
+    y: 8
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

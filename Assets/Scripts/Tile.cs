@@ -12,5 +12,5 @@ public class Tile : MonoBehaviour
         instance.transform.localPosition = position;
         return instance;
     }
-    public void Despawn() => pool.Recycle(this);
+    public void Despawn () => pool.Recycle(this);
 }
