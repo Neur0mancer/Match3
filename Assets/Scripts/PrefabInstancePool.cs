@@ -1,10 +1,10 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public struct PrefabInstancePool<T> where T : MonoBehaviour
 {
     Stack<T> pool;
+
     public T GetInstance(T prefab) {
         if (pool == null) {
             pool = new();

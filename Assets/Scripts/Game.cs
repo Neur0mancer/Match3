@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Game : MonoBehaviour
@@ -7,6 +5,7 @@ public class Game : MonoBehaviour
     [SerializeField] Match3Skin match3;
     private Vector3 dragStart;
     private bool isDragging;
+
     private void Awake() => match3.StartNewGame();
 
     private void Update() {

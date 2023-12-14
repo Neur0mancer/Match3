@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using Unity.Mathematics;
 using UnityEngine;
 
@@ -12,6 +10,7 @@ public class Match3Skin : MonoBehaviour
     float2 tileOffset;
     public bool IsPlaying => true;
     public bool IsBusy => false;
+
     public void StartNewGame() {
         game.StartNewGame();
         tileOffset = -0.5f * (float2)(game.Size - 1);
