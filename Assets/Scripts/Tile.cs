@@ -1,14 +1,26 @@
 using UnityEngine;
+using UnityEngine.UI;
 
-public class Tile : MonoBehaviour
+public sealed class Tile : MonoBehaviour
 {
-    PrefabInstancePool<Tile> pool;
-
-    public Tile Spawn(Vector3 position) {
-        Tile instance = pool.GetInstance(this);
-        instance.pool = pool;
-        instance.transform.localPosition = position;
-        return instance;
+    public int x, y;
+    private Item _item;
+    public Item Item {
+        get => _item; 
+        set {
+            if (_item == value) return; 
+            _item = value;
+            icon.sprite = _item.sprite;
+        }
     }
-    public void Despawn () => pool.Recycle(this);
+
+    public Image icon;
+
+    public Button button;
+
+    private void Start() {
+        button.onClick.AddListener(() => {
+            Board.Instance.Select(this);
+        });
+    }
 }
