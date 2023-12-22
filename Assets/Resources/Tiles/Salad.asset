@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a4edde5d73aed847a10701f87b4049d, type: 3}
-  m_Name: Coco
+  m_Script: {fileID: 11500000, guid: 12a65ef9204fa3740b92423d0be59499, type: 3}
+  m_Name: Salad
   m_EditorClassIdentifier: 
-  value: 6
-  sprite: {fileID: 21300000, guid: 51c6529af8800354483d1e94f05357cd, type: 3}
+  id: 5
+  value: 5
+  sprite: {fileID: 21300000, guid: 0ce701d092fb1a7488fdf89745f10d64, type: 3}

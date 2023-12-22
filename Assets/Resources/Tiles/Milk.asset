@@ -9,8 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a4edde5d73aed847a10701f87b4049d, type: 3}
+  m_Script: {fileID: 11500000, guid: 12a65ef9204fa3740b92423d0be59499, type: 3}
   m_Name: Milk
   m_EditorClassIdentifier: 
+  id: 1
   value: 1
   sprite: {fileID: 21300000, guid: 598551b8964b227429a70f76ee091f54, type: 3}
