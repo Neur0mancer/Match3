@@ -172,13 +172,13 @@ namespace MatchThreeEngine {
 
         }
         private async Task<bool> TryMatchAsync() {
-            var matched = true;
+            var matched = false;
 
             _isMatching = true;
 
             var match = TileDataMatrixUtility.FindBestMatch(Matrix);
 
-            if (match != null) {
+            while (match != null) {
                 matched = true;
                 var tiles = GetTiles(match.Tiles);
 
@@ -196,12 +196,11 @@ namespace MatchThreeEngine {
                     inflateSequence.Join(tile.icon.transform.DOScale(Vector3.one, tweenDuration).SetEase(Ease.OutBack));
                 }
                 await inflateSequence.Play().AsyncWaitForCompletion();
-                //Add scan for matches after spawned new tiles instead of shuffle
+                
                 OnMatch?.Invoke(Array.Find(tileTypes, tileType => tileType.id == match.TypeId), match.Tiles.Length);
                 Score += TILE_VALUE * tiles.Length;
                match = TileDataMatrixUtility.FindBestMatch(Matrix);
             }
-
             _isMatching = false;
             return matched;
         }       
